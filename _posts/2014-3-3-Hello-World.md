@@ -46,7 +46,7 @@ There are several options I'd like to explore as I progress into this project fu
 2. Decrease the distance from the boundaries when selecting houses into my sample. Currently, I have the distance set to be 0.35 miles, when I further decrease this distance, selected houses are closer to each other, and thus the neighborhood characteristics will be more similar. If the results stay stable, then our coefficient is capturing the true causal effect between school rating and house prices, not the progression of neighborhoods.
 
 
-## Appendix ##
+## Econometrics Appendix ##
 Running a linear regression in the following format:
 
 $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\epsilon_{isb}$$
@@ -55,5 +55,9 @@ where $HousePrice_{isb}$ is the target, $X_{isb}$ captures all household charact
 
 However, houses located on either side within 0.35 miles from the school district boundaries actually share similar neighborhood characteristics. So the neighborhood effect progresses smoothly across the boundaries. Given this asuumption, we could run the following regression with boundary Fixed Effects, which would enable us to draw causal inferences from the coefficient $\gamma$:
 $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\Psi_{ib}+\epsilon_{isb}$$
+
+## Comments? ##
+I'd appreciate any comments to how I could carry the project further :smile:
+
 
 
