@@ -15,5 +15,5 @@ This is an example of two elementary school districts in the city of San Jose:
 
 
 ## Appendix ##
-(i.e. running a regression in this form: $HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{s}+\epsilon_{isb}$)
-then the coefficient of interest here \gamma
+i.e. running a regression in this form: \(HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{s}+\epsilon_{isb}\)
+then the coefficient of interest here \(\gamma\)
