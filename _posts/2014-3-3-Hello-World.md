@@ -26,7 +26,7 @@ The following picture is an example of the city of San Jose with all its element
 ![](/images/school5.png)
 
 While this picture here demonstrates the locations of a 68,000 houses I scraped from Zillow, and 854 elementary school districts I scraped from GreatSchools.org in the Bay Area.
-![](/images/school6.png)
+![](/images/shcool6.png)
 
 I used Python's Geopandas Shapely library to perform geometric manipulations in order to allocate thousands of houses onto hundreds of school boundaries, and visualized this entire process using Geopandas geometric plotting tools.
 
