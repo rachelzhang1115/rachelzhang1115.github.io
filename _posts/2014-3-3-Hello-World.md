@@ -30,7 +30,7 @@ While this picture here demonstrates the locations of a 68,000 houses I scraped 
 
 I used Python's Geopandas Shapely library to perform geometric manipulations in order to allocate thousands of houses onto hundreds of school boundaries, and visualized this entire process using Geopandas geometric plotting tools.
 
-After successfully allocating and selecting houses within 0.35 miles from the school district boundaries, I was able to run a Regression Discontinuity Model on the sampled data \( Refer to Appendix for a detailed explanation on the Regression Discontinuity Model\). The major result I got from my model includes: if elementary school rating increases by 1 unit, it causes average house prices to increase by 1.7%. Given the average housing price in the Bay Area to be close to \$1 million\, this is an increase of \$17,000 in property values. 
+After successfully allocating and selecting houses within 0.35 miles from the school district boundaries, I was able to run a Regression Discontinuity Model on the sampled data \( Refer to Appendix for a detailed explanation on the Regression Discontinuity Model\). The major result I got from my model includes: if elementary school rating increases by 1 unit, it causes average house prices to increase by 1.7%. Given the average housing price in the Bay Area to be close to \$ 1 million, this is an increase of \$17,000 in property values. 
 
 The result has several implications: given a 1 point increase in elementary school rating
 1. Parents are willing to pay \$17,000 more for their kids to go to that better school
