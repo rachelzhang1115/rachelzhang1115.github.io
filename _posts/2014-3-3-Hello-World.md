@@ -10,8 +10,8 @@ Public education is free in the U.S. But the question we are asking today is: ar
 
 In most of the cases, good schools are located in good neighborhoods. Both good schools and good neighborhoods could contribute to higher house prices. Given that house prices can be affected by many factors such as house characteristics \(number of bedrooms, bathrooms, square footage, lot size, etc.\), public school ratings, and "niceness" of neighborhoods, if we use the common approach of running a linear regression without any neighborhood features, we could only pick up the correlation, but not the isolated and direct relationship, which we usually call **Causality**, between school ratings and house prices \(For a more detailed Economteric explanation on the regression, please refer to the Appendix\). 
 
-I propose a novel approach to capture the neighborhood effects in our regression. The following graph is an example of two elementary school districts in the city of San Jose, they share a boundary in the middle.
-![an image alt text]({{ site.baseurl }}/images/school1.png "an image title")
+I propose a novel approach to capture the neighborhood effects in our regression. 
+![The following graph is an example of two elementary school districts in the city of San Jose, they share a boundary in the middle.](/images/school1.png)
 
 
 ## Appendix ##
