@@ -3,6 +3,7 @@ layout: post
 title: What is the Financial Value of Public Schools? -- A Spatial Discontinuity Design & Causal Inferences
 author: Rachel Zhang
 mathjax: true
+comments: true
 ---
 
 
