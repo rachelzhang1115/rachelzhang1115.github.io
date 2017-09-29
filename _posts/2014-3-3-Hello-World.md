@@ -22,6 +22,21 @@ The yellow shaded region incudes areas that are within 0.35 miles away from the 
 If we only look at houses that are within this region, we could say that these houses share similar neighborhood characteristics.
 ![](/images/school4.png)
 
+The following picture is an example of the city of San Jose with all its elementary school districts and the houses that are located within 0.35 miles away from the boundaries.
+![](/images/school5.png)
+
+While this picture here demonstrates the locations of a 68,000 houses I scraped from Zillow, and 854 elementary school districts I scraped from GreatSchools.org in the Bay Area.
+![](/images/school6.png)
+
+I used Python's Geopandas Shapely library to perform geometric manipulations in order to allocate thousands of houses onto hundreds of school boundaries, and visualized this entire process using Geopandas geometric plotting tools.
+
+After successfully allocating and selecting houses within 0.35 miles from the school district boundaries, I was able to run a Regression Discontinuity Model on the sampled data \( Refer to Appendix for a detailed explanation on the Regression Discontinuity Model\). The major result I got from my model includes: if elementary school rating increases by 1 unit, it causes average house prices to increase by 1.7%. Given the average housing price in the Bay Area to be close to \$1 million, this is an increase of \$17,000 in property values. 
+
+The result has several implications: given a 1 point increase in elementary school rating
+1. Parents are willing to pay \$17,000 more for their kids to go to that better school
+2. Property owners can expect an increase of \$17,000 in their property values
+3. For policy makers, taking the city of San Jose as an example: there are a total of 313,000 housing units in the city, multiplied by the marginal increase of \$17,000 in house prices, then multiplied by the property tax rate of 0.95, the San Jose government should expect an increase in property tax of about \$50 million. Due to the complicated nature of the California Property Tax, this number is just an estimate of the true effect of a 1 point increase in elementary school rating on tax revenues. However, the magnitude of this number conveys a clear story: investing in public education is not only beneficial for the well-being of our next generations, it also generates tax revenues that could potentially cover the investment itself.
+
 
 ## Appendix ##
 Running a linear regression in the following format:
@@ -29,4 +44,8 @@ Running a linear regression in the following format:
 $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\epsilon_{isb}$$
 
 where $HousePrice_{isb}$ is the target, $X_{isb}$ captures all household characteristics such as number of bedrooms, bathrooms, square footage, lot size, etc., and $SchoolRating_{is}$ is the assigned elementary school's rating. Since we don't have any features that capture the neighborhood effects in this regression, its effect will be captured by the error term $\epsilon_{isb}$. Thus the error term is both correlated with the target $HousePrice_{isb}$ and one of the features $SchoolRating_{is}$ in our regression, and our regression coefficient $\gamma$ suffers from omitted variable bias, and cannot be interpreted as the causal effect of school rating on house prices.
+
+However, houses located on either side within 0.35 miles from the school district boundaries actually share similar neighborhood characteristics. So the neighborhood effect progresses smoothly across the boundaries. Given this asuumption, we could run the following regression with boundary Fixed Effects, which would enable us to draw causal inferences from the coefficient $\gamma$:
+$$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\Psi_{ib}+\epsilon_{isb}$$
+
 
