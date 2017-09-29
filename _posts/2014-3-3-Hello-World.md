@@ -57,7 +57,7 @@ However, houses located on either side within 0.35 miles from the school distric
 $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\Psi_{ib}+\epsilon_{isb}$$
 
 ## Comments? ##
-I'd appreciate any comments to how I could carry the project further :smile:
+I'd appreciate any comments on how I could carry the project further :smile:
 
 
 
