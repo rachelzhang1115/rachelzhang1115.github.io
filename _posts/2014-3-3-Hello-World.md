@@ -55,7 +55,7 @@ $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\epsilon_{isb}
 
 where $HousePrice_{isb}$ is the target, $X_{isb}$ captures all household characteristics such as number of bedrooms, bathrooms, square footage, lot size, etc., and $SchoolRating_{is}$ is the assigned elementary school's rating. Since we don't have any features that capture the neighborhood effects in this regression, its effect will be captured by the error term $\epsilon_{isb}$. Thus the error term is both correlated with the target $HousePrice_{isb}$ and one of the features $SchoolRating_{is}$ in our regression, and our regression coefficient $\gamma$ suffers from omitted variable bias, and cannot be interpreted as the causal effect of school rating on house prices.
 
-However, houses located on either side within 0.35 miles from the school district boundaries actually share similar neighborhood characteristics. So the neighborhood effect progresses smoothly across the boundaries. Given this asuumption, we could run the following regression with boundary Fixed Effects, which would enable us to draw causal inferences from the coefficient $\gamma$:
+However, houses located on either side within 0.35 miles from the school district boundaries actually share similar neighborhood characteristics. So the neighborhood effect progresses smoothly across the boundaries. Given this assumption, we could run the following regression with boundary Fixed Effects $\Psi_{ib}$, which would enable us to draw causal inferences from the coefficient $\gamma$:
 $$HousePrice_{isb}=\alpha+\beta*X_{isb} +\gamma*SchoolRating_{is}+\Psi_{ib}+\epsilon_{isb}$$
 
 ## Comments? ##
